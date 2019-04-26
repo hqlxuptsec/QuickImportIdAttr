@@ -1,0 +1,61 @@
+<idea-plugin>
+  <id>com.hql.auto-gradle</id>
+  <name>AutoGradleTest</name>
+  <version>1.0.1</version>
+  <vendor email="1243538187@qq.com" url="https://github.com/hqlxuptsec/QuickImportIdAttr">
+    https://github.com/hqlxuptsec/QuickImportIdAttr
+  </vendor>
+
+  <description><![CDATA[
+      <h1>AutoGradle</h1>
+      <br/>
+      <p>
+      <b>
+      <a href="https://github.com/hqlxuptsec/QuickImportIdAttr">GitHub</a> |
+      </b>
+      </p>
+      <br/>
+      <h2>A auto import gradle project plugin.</h2>
+      <br/>
+      <h2>Usage:</h2>
+      <br/>
+      <ul>
+        <li>Ctrl + Alt + 5</li>
+        <li>Tool -> AutoGradle</li>
+        <li>Click the button below</li>
+      </ul>
+      <br/>
+      <p><img src="http://www.hql.com//plugin/AutoGradle/img/toolbar_logo.png" width="750" height="30" alt="toolbar_logo.png"/></p>
+      <br/>
+      <h2>The following figure is the operation interface</h2>
+      <br/>
+      <p><img src="http://www.hql.com//plugin/AutoGradle/img/home_dialog.png" width="750" height="370" alt="screenshots.png"/></p>
+      <br/>
+    ]]></description>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="162.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <!--uncomment to enable plugin in all products-->
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="JyyPlugin.WithOnHandImportAction" class="com.hql.action.WithOnHandImportAction" text="ID一键导入"
+            description="界面开发时，需要手动设置界面元素id及变量名，重复性高；通过一键导入可自动生成并导入"
+            icon="/icon/gradle.svg">
+      <add-to-group group-id="ToolbarRunGroup" anchor="last"/>
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl UP"/>
+    </action>
+  </actions>
+
+</idea-plugin>
