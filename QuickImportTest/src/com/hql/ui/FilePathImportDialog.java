@@ -66,7 +66,7 @@ public class FilePathImportDialog extends JFrame {
                 , JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
         btnSearch.addActionListener(e -> {
-            jFileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+            jFileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
             jFileChooser.showDialog(new JLabel(), "选择");
             File file = jFileChooser.getSelectedFile();
             tvPath.setText(file.getAbsoluteFile().toString());
@@ -109,6 +109,7 @@ public class FilePathImportDialog extends JFrame {
         Editor editor = e.getRequiredData(CommonDataKeys.EDITOR);
         CaretModel caretModel = editor.getCaretModel();
         int offset = caretModel.getOffset();
+        final String[] path = new String[1];
         WriteCommandAction.runWriteCommandAction(e.getProject(), () -> {
             List<String> showStrList = new ArrayList<>();
 
@@ -123,11 +124,14 @@ public class FilePathImportDialog extends JFrame {
                 }
             }
             Collections.reverse(showStrList);
+
             for (String currentStr : showStrList) {
                 editor.getDocument().insertString(offset, currentStr);
+                path[0] = editor.getProject().getBasePath();
             }
+
         });
-        showNotification("withTheHandImport", "快速导入界面控件变量", "implementation success");
+        showNotification("withTheHandImport", "快速导入界面控件变量", "implementation success: path:" + path[0]);
     }
 
     private void showNotification(String displayId, String title, String message) {
@@ -138,5 +142,17 @@ public class FilePathImportDialog extends JFrame {
                 NotificationType.INFORMATION,
                 null
         ).notify(event.getProject());
+    }
+
+    public void setTvPathText(String path) {
+        tvPath.setText(path);
+        updateTableData(path);
+    }
+
+
+    private void updateTableData(String path) {
+        elementBeanList = ParseXmlUtil
+                .parseXmlFile(path);
+        setCustomTableModel(new OneHandImportTableModel(elementBeanList));
     }
 }
