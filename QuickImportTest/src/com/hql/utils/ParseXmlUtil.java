@@ -16,22 +16,31 @@ import java.util.List;
 public class ParseXmlUtil {
     /**
      * 解析xml文件，将对应的标签id列表保存返回
-     * @param fileInputStream       读对应的文件
+     * @param fileDir       读对应的文件
      * @param encodeFormat          编码格式
      * @return                      xml id列表
      */
-    private static List<ElementBean> parseXmlFile(FileInputStream fileInputStream, String encodeFormat) {
+    private static List<ElementBean> parseXmlFile2(String fileDir, String encodeFormat) {
         //1.获取xml解析器
         XmlPullParserFactory xmlPullParserFactory;
         XmlPullParser xmlPullParser;
         List<ElementBean> elementBeans = new LinkedList<>();
+        FileInputStream inputStream;
         try {
+
+            System.out.println("begin");
+            inputStream = new FileInputStream(fileDir);
             //获得一个XMLPULL工厂类的实例
             xmlPullParserFactory = XmlPullParserFactory.newInstance();
+            System.out.println("xmlPullParserFactory:" + xmlPullParserFactory);
+            if (xmlPullParserFactory == null) {
+                return elementBeans;
+            }
             //获得一个XML解析器的实例
             xmlPullParser = xmlPullParserFactory.newPullParser();
             //设置解析器的输入，使用inputStream流式数据。
-            xmlPullParser.setInput(fileInputStream, encodeFormat);
+            xmlPullParser.setInput(inputStream, encodeFormat);
+            System.out.println("xmlPullParser:" + xmlPullParser);
             //判断当前的事件类型
             int eventType = xmlPullParser.getEventType();
             //循环读取，知道事件类型为文档结束
@@ -48,8 +57,10 @@ public class ParseXmlUtil {
                 //读取下一个标签
                 eventType = xmlPullParser.next();
             }
-            fileInputStream.close();
+            inputStream.close();
         } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -67,17 +78,7 @@ public class ParseXmlUtil {
         if (TextUtils.isEmpty(dir)) {
             return Collections.emptyList();
         }
-        List<ElementBean> elementBeanList = null;
-        FileInputStream inputStream;
-        try {
-            inputStream = new FileInputStream(dir);
-            elementBeanList = parseXmlFile(inputStream, encodeFormat);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return elementBeanList;
+        return parseXmlFile2(dir, encodeFormat);
     }
 
     /**

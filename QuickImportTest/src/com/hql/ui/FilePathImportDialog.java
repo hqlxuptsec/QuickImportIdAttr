@@ -34,7 +34,8 @@ public class FilePathImportDialog extends JFrame {
 
     private JButton btnOk;
     private JButton btnCancel;
-    private JRadioButton btnRadio;
+    private JRadioButton btnKnife;
+    private JRadioButton btnFindViewById;
 
     private JFileChooser jFileChooser = new JFileChooser();
     private JBTable jbTable;
@@ -42,10 +43,8 @@ public class FilePathImportDialog extends JFrame {
     private List<ElementBean> elementBeanList;
 
     public FilePathImportDialog(AnActionEvent event, List<ElementBean> data) {
-
         this.event = event;
         this.elementBeanList = data;
-
         initUI();
         initListener();
     }
@@ -74,6 +73,16 @@ public class FilePathImportDialog extends JFrame {
             elementBeanList = ParseXmlUtil
                     .parseXmlFile(file.getAbsoluteFile().toString());
             setCustomTableModel(new OneHandImportTableModel(elementBeanList));
+        });
+        btnKnife.addActionListener(e -> {
+            if (btnKnife.isSelected()) {
+                btnFindViewById.setSelected(false);
+            }
+        });
+        btnFindViewById.addActionListener(e -> {
+            if (btnFindViewById.isSelected()) {
+                btnKnife.setSelected(false);
+            }
         });
     }
 
@@ -115,12 +124,36 @@ public class FilePathImportDialog extends JFrame {
 
             for (ElementBean resp : data) {
                 if (resp.isSelect()) {
-                    if (btnRadio.isSelected()) {
-                        String butterKnifeFormat = "\n    @BindView(R.id." + resp.getId() + ")";
-                        showStrList.add(butterKnifeFormat);
+                    if (btnFindViewById.isSelected()) {
+                           StringBuilder findViewByIdStrBuilder = new StringBuilder()
+                                   .append("\t")
+                                   .append(resp.getAttrsName())
+                                   .append(" = ")
+                                   .append("(")
+                                   .append(resp.getViewName())
+                                   .append(")")
+                                   .append("findViewById(R.id.")
+                                   .append(resp.getId())
+                                   .append(");")
+                                   .append("\n");
+                           showStrList.add(findViewByIdStrBuilder.toString());
+
+                    } else {
+                        if (btnKnife.isSelected()) {
+                            StringBuilder butterKnifeBuilder = new StringBuilder();
+                            butterKnifeBuilder.append("\n\t@BindView(R.id.")
+                                    .append(resp.getId())
+                                    .append(")");
+                            showStrList.add(butterKnifeBuilder.toString());
+                        }
+                        StringBuilder fieldVarStrBuilder = new StringBuilder();
+                        fieldVarStrBuilder.append("\n\t")
+                                .append(resp.getViewName())
+                                .append("\t")
+                                .append(resp.getAttrsName())
+                                .append(";");
+                        showStrList.add(fieldVarStrBuilder.toString());
                     }
-                    String impl = "\n    " + resp.getViewName() + "    " /*+ resp.getId()*/ + resp.getAttrsName() + ";";
-                    showStrList.add(impl);
                 }
             }
             Collections.reverse(showStrList);
@@ -148,7 +181,6 @@ public class FilePathImportDialog extends JFrame {
         tvPath.setText(path);
         updateTableData(path);
     }
-
 
     private void updateTableData(String path) {
         elementBeanList = ParseXmlUtil
