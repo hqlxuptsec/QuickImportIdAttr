@@ -15,7 +15,9 @@
       </b>
       </p>
       <br/>
-      <h2>界面开发时，需要手动设置界面元素id及变量名，重复性高；通过一键导入可自动生成并导入</h2>
+      <h2>界面开发时，需要手动设置界面元素id及变量名，重复性高；通过一键导入可自动生成并导入.</h2>
+      <li>1.可以快速导入XML控件;</li>
+      <li>2.如果使用ButterKnife，可以直接导入View属性的 相关格式；</li>
       <br/>
       <h2>Usage:</h2>
       <br/>
@@ -23,7 +25,7 @@
         <li>选中需要解析的XML文件名 -> 右键 -> ID一键导入</li>
       </ul>
       <br/>
-      <p><img src="https://s27.aconvert.com/convert/p3r68-cdx67/d4ixq-10rc4.gif" width="900" height="450" alt="toolbar_logo.png"/></p>
+      <p><img src="https://github.com/hqlxuptsec/QuickImportIdAttr/blob/master/QuickImportTest/resources/icon/operate.gif" width="1092" height="800" alt="toolbar_logo.png"/></p>
       <br/>
       <br/>
       <br/>
@@ -31,6 +33,7 @@
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="162.0"/>
+  <depends>com.intellij.modules.java</depends>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->

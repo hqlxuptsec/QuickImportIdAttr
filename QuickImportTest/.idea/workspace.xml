@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="09f5a1ec-c3b9-4a92-a9e4-7ed4db7b2438" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickImportTest.jar" beforeDir="false" afterPath="$PROJECT_DIR$/QuickImportTest.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/QuickImportTest/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuickImportTest/META-INF/plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
@@ -44,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3240">
-              <caret line="120" column="19" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
+            <state relative-caret-position="3267">
+              <caret line="121" column="19" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -63,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="25" column="104" selection-start-line="25" selection-start-column="104" selection-end-line="25" selection-end-column="104" />
+            <state relative-caret-position="351">
+              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -72,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuickImportTest.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="162">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -206,6 +207,11 @@
             <path>
               <item name="QuickImportTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="QuickImportTest" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickImportTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickImportTest" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -219,68 +225,6 @@
               <item name="QuickImportTest" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickImportTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickImportTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickImportTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickImportTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickImportTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickImportTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hql" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickImportTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickImportTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hql" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-              <item name="WithOnHandImportAction" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="QuickImportTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickImportTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hql" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickImportTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickImportTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hql" type="462c0819:PsiDirectoryNode" />
-              <item name="TableModel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickImportTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickImportTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hql" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickImportTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickImportTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hql" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickImportTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickImportTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hql" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="ParseXmlUtil" type="1a9f42e2:ClassTreeNode" />
             </path>
           </expand>
           <select />
@@ -402,11 +346,13 @@
       <workItem from="1560499106356" duration="4384000" />
       <workItem from="1560508667296" duration="236000" />
       <workItem from="1560508923503" duration="129000" />
+      <workItem from="1560771561960" duration="1142000" />
+      <workItem from="1561010807000" duration="4370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119964000" />
+    <option name="totallyTimeSpent" value="125476000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,16 +367,17 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49830124" visible="true" weight="0.23650108" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49830124" visible="true" weight="0.24514039" />
       <window_info id="Structure" order="1" sideWeight="0.50169873" side_tool="true" weight="0.22516198" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Build Variants" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49784017" weight="0.5288788" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4973002" weight="0.5288788" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946004" weight="0.4813137" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -439,7 +386,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3295583" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3295583" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50215983" side_tool="true" weight="0.5288788" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026998" side_tool="true" weight="0.5288788" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3295583" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -940,8 +887,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3240">
-          <caret line="120" column="19" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
+        <state relative-caret-position="3267">
+          <caret line="121" column="19" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -953,8 +900,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/QuickImportTest.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="162">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -982,8 +929,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="25" column="104" selection-start-line="25" selection-start-column="104" selection-end-line="25" selection-end-column="104" />
+        <state relative-caret-position="351">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
         </state>
       </provider>
     </entry>
