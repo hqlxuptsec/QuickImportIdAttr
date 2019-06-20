@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.hql.quick.import.id</id>
   <name>QuickImportIdAttr</name>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <vendor email="1243538187@qq.com" url="https://github.com/hqlxuptsec/QuickImportIdAttr">
     https://github.com/hqlxuptsec/QuickImportIdAttr
   </vendor>
